@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload CSV</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+<div class="container">
+    <div class="wrapper">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="file" id="file" required>
+            <input class="time_frame" type="text" placeholder="Time Frame" id="text" name="time_frame" required> <br>
+            <input class="btn" type="submit" value="Submit">
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>
